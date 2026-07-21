@@ -1,0 +1,23 @@
+name: Bug report
+description: 报告可以稳定复现的问题
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: 问题描述
+      description: 请说明实际结果与预期结果。
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 复现步骤
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: HengFlow ERP 版本
+  - type: textarea
+    attributes:
+      label: 环境与日志
+      description: 请先移除密码、令牌、客户资料等敏感信息。

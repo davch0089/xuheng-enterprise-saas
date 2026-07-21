@@ -1,0 +1,15 @@
+HengFlow ERP
+Copyright (c) 2026 HengFlow ERP contributors
+
+This project is derived from Kinit:
+Copyright (c) 2022 ktianc
+https://github.com/vvandk/kinit
+Licensed under the MIT License.
+
+The web administration interface is derived from vue-element-plus-admin:
+https://github.com/kailong321200875/vue-element-plus-admin
+Its original license and copyright notices remain applicable to the derived portions.
+
+HengFlow ERP retains the original copyright and license notices as required by
+the upstream licenses. Product names and trademarks belong to their respective
+owners.

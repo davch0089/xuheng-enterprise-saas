@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /d D:\\\\Code\\\\erp\\\\kinit\\\\kinit-api)",
+      "Bash(python -c \"from application.config.development import *; print\\('SQLALCHEMY_DATABASE_URL:', SQLALCHEMY_DATABASE_URL if 'SQLALCHEMY_DATABASE_URL' in dir\\(\\) else 'not found'\\)\")",
+      "Bash(python -c \"from application.settings import MIDDLEWARES; print\\('MIDDLEWARES:', [m for m in MIDDLEWARES if m]\\)\")",
+      "Bash(pip show *)",
+      "Bash(python -c ' *)",
+      "Bash(./venv/Scripts/python.exe -c ' *)"
+    ]
+  }
+}

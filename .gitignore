@@ -1,0 +1,46 @@
+# 本仓库只发布 API 与 Web 管理端
+kinit-task/
+kinit-uni/
+kinit-admin/
+接口部分初始化失败的请点这里/
+images/
+docker-compose.yml
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.suo
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/venv/
+**/.venv/
+**/ENV/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/logs/*
+!**/logs/.gitkeep
+**/temp/*
+!**/temp/.gitkeep
+**/*.db
+
+# 本地配置与密钥
+**/.env
+**/.env.*.local
+!**/.env.example
+
+# 前端依赖和构建结果
+**/node_modules/
+**/dist/
+**/dist-dev/
+**/dist-pro/
+**/dist-ssr/
+**/stats.html
+**/pnpm-debug.log*
+
+# 运行期附件
+**/static/erp/attachments/

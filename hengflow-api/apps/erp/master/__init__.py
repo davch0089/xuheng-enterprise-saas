@@ -1,0 +1,1 @@
+"""ERP master data module."""

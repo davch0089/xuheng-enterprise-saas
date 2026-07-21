@@ -51,5 +51,4 @@
 - `/erp/purchase/source-orders`：仍有未收数量的采购订单。
 - `/erp/purchase/source-receipts`：仍有可退数量的采购收货单。
 
-数据库结构和菜单由迁移 `a7c4e91d5b20_purchase_to_pay.py` 创建，完整事务测试位于 `scripts/smoke_erp_purchase.py`。
 

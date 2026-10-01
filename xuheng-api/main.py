@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import asyncio
+import sys
 
-asyncio.set_event_loop_policy(
-    asyncio.WindowsSelectorEventLoopPolicy()
-)
+if sys.platform == "win32":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 # @version        : 1.0
 # @Create Time    : 2021/10/19 15:47
 # @File           : main.py

@@ -75,7 +75,9 @@ onMounted(async () => {
       <el-form-item label="编码"><el-input v-model="form.code" /></el-form-item>
       <el-form-item label="名称"><el-input v-model="form.name" /></el-form-item>
       <el-form-item label="售价"><el-input v-model="form.sale_price" /></el-form-item>
-      <el-form-item label="期初数量"><el-input-number v-model="form.opening_quantity" :min="0" /></el-form-item>
+      <el-form-item label="期初数量"
+        ><el-input-number v-model="form.opening_quantity" :min="0"
+      /></el-form-item>
       <el-form-item><el-button type="primary" @click="create">新增商品</el-button></el-form-item>
     </el-form>
     <el-form inline>
@@ -84,7 +86,9 @@ onMounted(async () => {
           <el-option v-for="item in rows" :key="item.id" :label="item.name" :value="item.id" />
         </el-select>
       </el-form-item>
-      <el-form-item label="数量"><el-input-number v-model="receive.quantity" :min="1" /></el-form-item>
+      <el-form-item label="数量"
+        ><el-input-number v-model="receive.quantity" :min="1"
+      /></el-form-item>
       <el-form-item><el-button @click="addStock">数量入库</el-button></el-form-item>
     </el-form>
     <el-table :data="rows" border>

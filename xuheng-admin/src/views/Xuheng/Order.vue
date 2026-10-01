@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue'
 import { ElMessage } from 'element-plus'
-import { addOrderApi, getOrdersApi, getProductsApi, getTenantsApi, orderActionApi } from '@/api/xuheng'
+import {
+  addOrderApi,
+  getOrdersApi,
+  getProductsApi,
+  getTenantsApi,
+  orderActionApi
+} from '@/api/xuheng'
 
 defineOptions({ name: 'XuhengOrder' })
 
@@ -110,10 +116,20 @@ onMounted(async () => {
       </el-table-column>
       <el-table-column label="操作" min-width="260">
         <template #default="{ row }">
-          <el-button v-if="row.status === 'pending_confirm'" link type="primary" @click="act(row, 'confirm')">
+          <el-button
+            v-if="row.status === 'pending_confirm'"
+            link
+            type="primary"
+            @click="act(row, 'confirm')"
+          >
             确认
           </el-button>
-          <el-button v-if="row.status === 'pending_ship'" link type="primary" @click="act(row, 'ship')">
+          <el-button
+            v-if="row.status === 'pending_ship'"
+            link
+            type="primary"
+            @click="act(row, 'ship')"
+          >
             发货
           </el-button>
           <el-button
@@ -123,7 +139,12 @@ onMounted(async () => {
           >
             关闭
           </el-button>
-          <el-button v-if="row.status === 'completed'" link type="warning" @click="act(row, 'return')">
+          <el-button
+            v-if="row.status === 'completed'"
+            link
+            type="warning"
+            @click="act(row, 'return')"
+          >
             退货
           </el-button>
         </template>

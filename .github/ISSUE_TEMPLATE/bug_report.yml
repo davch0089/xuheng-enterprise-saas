@@ -16,7 +16,7 @@ body:
       required: true
   - type: input
     attributes:
-      label: HengFlow ERP 版本
+      label: 序衡 版本
   - type: textarea
     attributes:
       label: 环境与日志

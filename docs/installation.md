@@ -1,6 +1,6 @@
 # 源码安装
 
-HengFlow ERP。本说明以同一台服务器部署 MySQL、Redis、FastAPI 和前端静态文件为例。
+序衡。本说明以同一台服务器部署 MySQL、Redis、FastAPI 和前端静态文件为例。
 
 ## 1. 环境要求
 
@@ -25,7 +25,7 @@ FLUSH PRIVILEGES;
 ## 3. 安装后端
 
 ```bash
-cd hengflow-api
+cd xuheng-api
 python -m venv venv
 ```
 
@@ -81,7 +81,7 @@ python main.py run --host 0.0.0.0 --port 9000
 ## 4. 安装前端
 
 ```bash
-cd hengflow-admin
+cd xuheng-admin
 pnpm install --frozen-lockfile
 pnpm dev
 ```

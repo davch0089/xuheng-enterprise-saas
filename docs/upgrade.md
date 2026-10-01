@@ -5,7 +5,7 @@
 3. 安装新增依赖并执行已发布迁移。
 
 ```bash
-cd hengflow-api
+cd xuheng-api
 pip install -r requirements.txt
 python main.py migrate --env pro
 ```
@@ -13,7 +13,7 @@ python main.py migrate --env pro
 4. 重新构建前端并替换静态文件。
 
 ```bash
-cd ../hengflow-admin
+cd ../xuheng-admin
 pnpm install --frozen-lockfile
 pnpm build:pro
 ```

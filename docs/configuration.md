@@ -1,6 +1,6 @@
 # 配置说明
 
-后端配置来自 `hengflow-api/.env`。仓库只提交 `.env.example`，严禁提交真实 `.env`。
+后端配置来自 `xuheng-api/.env`。仓库只提交 `.env.example`，严禁提交真实 `.env`。
 
 | 变量 | 必填 | 说明 |
 | --- | --- | --- |
@@ -16,4 +16,4 @@
 
 `INITIAL_ADMIN_*` 只在空数据库执行 `init` 时使用，不会在每次启动时覆盖管理员。
 
-前端开发代理由 `hengflow-admin/.env.dev` 中的 `VITE_API_TARGET` 控制。生产构建不把数据库、JWT 或 OSS 密钥写入前端环境变量。
+前端开发代理由 `xuheng-admin/.env.dev` 中的 `VITE_API_TARGET` 控制。生产构建不把数据库、JWT 或 OSS 密钥写入前端环境变量。

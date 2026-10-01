@@ -1,6 +1,6 @@
 # 贡献指南
 
-感谢参与 HengFlow ERP。
+感谢参与 序衡。
 
 1. Fork 仓库并从最新主分支创建功能分支。
 2. 不要提交 `.env`、日志、附件、数据库备份或真实业务数据。
@@ -11,10 +11,10 @@
 提交前执行：
 
 ```bash
-cd hengflow-api
+cd xuheng-api
 python -m compileall -q apps application core
 
-cd ../hengflow-admin
+cd ../xuheng-admin
 pnpm lint:eslint
 pnpm ts:check
 pnpm build:pro

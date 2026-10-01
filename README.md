@@ -1,18 +1,10 @@
-# HengFlow ERP
+# 序衡
 
-HengFlow ERP 是一个基于 FastAPI、Vue 3 和 MySQL 的开源进销存与经营管理系统，面向中小企业的采购、销售、库存、资金和经营分析场景。
+序衡是一个企业 SaaS 后台演示，主线是企业、商品、订单和按数量记账的库存。订单从待确认、待发货走到已完成或已关闭；发货减少该企业的库存数量，退货把数量加回。技术栈是 Vue、TypeScript、Python、MySQL 和 Redis。讲解对照见 [作品集说明](docs/portfolio.md)。
 
-> 当前处于积极开发阶段。部署生产环境前，请自行完成业务验收、安全审计和数据备份方案。
+仓库里还保留着一套采购、销售、库存成本和资金期间模块。那套模块沿用上游进销存的单据和过账方式，序衡主线不走那套流程。
 
-## 功能
-
-- 基础资料：商品 SPU/SKU、多单位、仓库、客户、供应商、职员
-- 采购管理：采购订单、采购入库、采购退货、应付和付款
-- 销售管理：销售订单、销售出库、销售退货、应收和收款
-- 库存管理：库存过账、成本核算、调拨、盘点、批次和序列号
-- 生产作业：简化 BOM、组装与拆卸
-- 财务管理：资金账户、收付款、核销、会计期间和经营利润
-- 公共能力：Excel 导入导出、打印模板、本地/OSS 附件、操作日志
+部署生产环境前，请自行完成业务验收、安全审计和数据备份方案。
 
 ## 技术栈
 
@@ -22,9 +14,9 @@ HengFlow ERP 是一个基于 FastAPI、Vue 3 和 MySQL 的开源进销存与经�
 ## 目录
 
 ```text
-hengflow-erp/
-├── hengflow-api/       # FastAPI 接口、迁移和初始化数据
-├── hengflow-admin/     # Vue 管理端
+xuheng/
+├── xuheng-api/       # FastAPI 接口、迁移和初始化数据
+├── xuheng-admin/     # Vue 管理端
 ├── docs/               # 安装、配置和开发文档
 ├── LICENSE
 ├── NOTICE
@@ -33,14 +25,14 @@ hengflow-erp/
 
 ## 快速开始
 
-HengFlow ERP 不提供 Docker 部署，需要预先安装 Python 3.10、MySQL 5.6+、Redis 6.0+、Node.js 18+ 和 pnpm 8+。
+本项目不提供 Docker 部署，需要预先安装 Python 3.10、MySQL 5.6+、Redis 6.0+、Node.js 18+ 和 pnpm 8+。
 
 详细步骤见 [源码安装文档](docs/installation.md)。
 
 后端概览：
 
 ```bash
-cd hengflow-api
+cd xuheng-api
 python -m venv venv
 # Windows: venv\Scripts\activate
 # Linux/macOS: source venv/bin/activate
@@ -53,7 +45,7 @@ python main.py run
 前端概览：
 
 ```bash
-cd hengflow-admin
+cd xuheng-admin
 pnpm install --frozen-lockfile
 pnpm dev
 ```
@@ -64,14 +56,14 @@ pnpm dev
 - API：http://127.0.0.1:9000
 - API 文档：http://127.0.0.1:9000/docs
 
-首次管理员账号和密码由 `hengflow-api/.env` 中的 `INITIAL_ADMIN_USERNAME`、`INITIAL_ADMIN_PASSWORD` 决定。首次登录后请立即修改密码。
+首次管理员账号和密码由 `xuheng-api/.env` 中的 `INITIAL_ADMIN_USERNAME`、`INITIAL_ADMIN_PASSWORD` 决定。首次登录后请立即修改密码。
 
 ## 升级
 
 拉取代码并备份数据库后执行：
 
 ```bash
-cd hengflow-api
+cd xuheng-api
 python main.py migrate --env pro
 ```
 
@@ -79,6 +71,8 @@ python main.py migrate --env pro
 
 ## 开源协议与来源
 
-项目使用 MIT License。HengFlow ERP 基于 Kinit 和 vue-element-plus-admin 进行二次开发，原项目版权和许可证信息均予以保留，详情见 [NOTICE](NOTICE)。
+本仓库衍生自 [HengFlow ERP](https://github.com/liyanzhang516/hengflow-erp)。HengFlow ERP 衍生自 Kinit 和 vue-element-plus-admin。三者都使用 MIT License。
+
+MIT 允许使用、修改和再分发，不把原作者的著作权转给后续修改者。Kinit、vue-element-plus-admin 和 HengFlow ERP 对各自原有代码的著作权仍然有效，声明在 [LICENSE](LICENSE) 和 [NOTICE](NOTICE)。序衡新增的企业、订单履约和数量库存是在这个许可证下写的后续改动。
 
 欢迎通过 Issue 报告问题，通过 Pull Request 参与开发。提交前请阅读 [贡献指南](CONTRIBUTING.md) 和 [安全策略](SECURITY.md)。

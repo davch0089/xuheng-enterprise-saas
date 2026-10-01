@@ -10,8 +10,11 @@ export const getProductsApi = (tenantId: number) =>
 
 export const addProductApi = (data: any) => request.post({ url: '/xuheng/products', data })
 
-export const receiveStockApi = (data: { tenant_id: number; product_id: number; quantity: number }) =>
-  request.post({ url: '/xuheng/stocks/receive', data })
+export const receiveStockApi = (data: {
+  tenant_id: number
+  product_id: number
+  quantity: number
+}) => request.post({ url: '/xuheng/stocks/receive', data })
 
 export const getOrdersApi = (tenantId: number) =>
   request.get({ url: '/xuheng/orders', params: { tenant_id: tenantId } })

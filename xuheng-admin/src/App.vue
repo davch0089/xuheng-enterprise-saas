@@ -32,14 +32,11 @@ const setSystemConfig = async () => {
   if (res) {
     appStore.setTitle(res.data.web_title || import.meta.env.VITE_APP_TITLE)
     appStore.setLogoImage(res.data.web_logo || '/media/system/logo.png')
-    appStore.setFooterContent(
-      res.data.web_copyright || '序衡演示 · 基于 HengFlow ERP'
-    )
+    appStore.setFooterContent(res.data.web_copyright || '序衡演示 · 基于 HengFlow ERP')
     appStore.setIcpNumber(res.data.web_icp_number || '')
     addMeta(
       'description',
-      res.data.web_desc ||
-        '序衡，面向商品、订单、用户与运营后台的企业 SaaS 管理系统'
+      res.data.web_desc || '序衡，面向商品、订单、用户与运营后台的企业 SaaS 管理系统'
     )
   }
 }
